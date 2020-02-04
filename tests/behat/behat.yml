@@ -21,3 +21,5 @@ default:
       image_drivers:
         local:
           screenshot_directory: /tmp
+  gherkin:
+    cache: ~
