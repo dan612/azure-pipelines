@@ -50,6 +50,12 @@ steps:
     inputs:
       filePath: 'blt/scripts/azure/setup_app.sh'
   - task: Bash@3
+    displayName: 'Clear Behat Cache'
+    inputs:
+      targetType: 'inline'
+      script: |
+        rm -rf /tmp/behat_*
+  - task: Bash@3
     displayName: 'Run Tests'
     inputs:
       filePath: 'blt/scripts/azure/test.sh'
